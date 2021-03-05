@@ -9,7 +9,7 @@ const LandingPageHeader = () => {
       <Container>
         <div>
           <MainHeadline>
-            Build your community in the <ImageText textValue="fastest" /> way
+            Build your community in the <ImageText textValue="easiest" /> way
             ever
           </MainHeadline>
         </div>

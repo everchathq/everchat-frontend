@@ -1,4 +1,5 @@
 import React from "react";
+import LandingPageFooter from "../../mainComponents/footer/LandingPageFooter";
 import LandingPageHeader from "./LandingPageHeader";
 
 const LandingPage = () => {
@@ -6,6 +7,7 @@ const LandingPage = () => {
     <>
       <LandingPageHeader />
       <div>Landing route component</div>
+      <LandingPageFooter />
     </>
   );
 };
