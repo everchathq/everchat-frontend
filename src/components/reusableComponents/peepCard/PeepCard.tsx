@@ -61,6 +61,11 @@ const Wrapper = styled.div`
 const PeepSection = styled.div<{ orientation: orientation }>`
   position: relative;
   top: -40px;
+
+  @media (max-width: 768px) {
+    top: 0;
+  }
+
   @media (max-width: 460px) {
     width: 0;
     ${props =>
