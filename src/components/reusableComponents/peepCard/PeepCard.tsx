@@ -6,83 +6,53 @@ import { Paragraph } from "../text/Paragraph";
 const StyledTextWrapper = styled.div<{ orientation: orientation }>`
   background: #f5f5f7;
   border-radius: 16px;
-  height: 100%;
+  margin: auto 0;
   ${props =>
     props.orientation === "left"
       ? `
-      margin-left: -120px;
-      padding: 40px 40px 40px 120px;
+    padding:40px 40px 40px 120px;
+    margin-left:-120px;
 
-      @media (max-width: 460px){
-        display:inline-block;
-        margin:0 16px;
-      }
-      @media (max-width: 360px){
-        padding-left:40px;
+    @media (max-width: 400px) {
+        margin-right:16px;
+        margin-left:-180px;
+        padding:40px;
       }
     `
       : `
-      margin-right: -120px;
-      padding: 40px 120px 40px 40px;
+    padding:40px 120px 40px 40px;
+    margin-right:-120px;
 
-      @media (max-width: 460px){
-          display:inline-block;
-          margin:0 16px;
-      }
-      @media (max-width: 360px){
-        padding-right:40px;
+    @media (max-width: 400px) {
+        margin-left:16px;
+        margin-right:-180px;
+        padding:40px;
       }
       `}
 `;
 
-const ImageWrapper = styled.div<{ orientation: orientation }>`
-  width: 200px;
-  height: 240px;
-  text-align: center;
-
-  @media (max-width: 360px) {
-    width: 140px;
-    height: 168px;
-  }
-`;
-const PeepImage = styled.img`
-  width: auto;
-  max-width: 100%;
-  height: 100%;
-`;
-
 const Wrapper = styled.div`
   display: flex;
-  @media (max-width: 460px) {
-    display: inline-block;
-  }
 `;
 
-const PeepSection = styled.div<{ orientation: orientation }>`
+const ImageWrapper = styled.div<{ orientation: orientation }>`
+  flex-basis: 100%;
+  min-width: 200px;
+  max-width: 200px;
+  width: 200px;
+  height: 240px;
   position: relative;
-  top: -40px;
+  margin: auto;
 
-  @media (max-width: 768px) {
-    top: 0;
+  img {
+    width: auto;
+    max-width: 100%;
+    height: 100%;
   }
 
-  @media (max-width: 460px) {
-    width: 0;
+  @media (max-width: 400px) {
     ${props =>
-      props.orientation === "left"
-        ? `
-    right: 80px;`
-        : `right:140px;`}
-    top: 55px;
-    display: inline-block;
-  }
-  @media (max-width: 360px) {
-    top: 0px;
-    ${props =>
-      props.orientation === "left"
-        ? `
-      right: 100px;`
-        : `right:60px;`}
+      props.orientation === "right" ? `left: 120px;` : `right:120px;`}
   }
 `;
 
@@ -104,11 +74,9 @@ const PeepCard: FC<props> = ({
   return (
     <Wrapper>
       {orientation === "left" && (
-        <PeepSection orientation={orientation}>
-          <ImageWrapper orientation={orientation}>
-            <PeepImage src={imageSrc} />
-          </ImageWrapper>
-        </PeepSection>
+        <ImageWrapper orientation={orientation}>
+          <img src={imageSrc} />
+        </ImageWrapper>
       )}
 
       <StyledTextWrapper orientation={orientation}>
@@ -117,11 +85,9 @@ const PeepCard: FC<props> = ({
       </StyledTextWrapper>
 
       {orientation === "right" && (
-        <PeepSection orientation={orientation}>
-          <ImageWrapper orientation={orientation}>
-            <PeepImage src={imageSrc} />
-          </ImageWrapper>
-        </PeepSection>
+        <ImageWrapper orientation={orientation}>
+          <img src={imageSrc} />
+        </ImageWrapper>
       )}
     </Wrapper>
   );
