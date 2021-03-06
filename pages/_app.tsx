@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
 
   html, body{
     margin:0;
+    min-width:300px;
   }
 `;
 

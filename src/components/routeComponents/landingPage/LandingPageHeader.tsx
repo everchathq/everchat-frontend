@@ -9,8 +9,7 @@ const LandingPageHeader = () => {
       <Container>
         <div>
           <MainHeadline>
-            Build your community in the <ImageText textValue="easiest" /> way
-            ever
+            The place to build <ImageText textValue="unbiased" /> communities
           </MainHeadline>
         </div>
       </Container>

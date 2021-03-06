@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledFooterWrapper = styled.div`
-  max-width: 1500px;
+  max-width: 1440px;
   margin: 0 auto;
   position: relative;
   height: 240px;
