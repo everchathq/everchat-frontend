@@ -40,7 +40,8 @@ const LandingPreFooter = () => {
 
       <CaptionText style={{ margin: "0 0 40px 0" }}>
         <CustomLink href="#">Privacy Policy</CustomLink> ·{" "}
-        <CustomLink href="#">Terms of Service</CustomLink>
+        <CustomLink href="#">Terms of Service</CustomLink> ·{" "}
+        <CustomLink href="#">Cookie Policy</CustomLink>
       </CaptionText>
 
       <SocialMediaWrapper>

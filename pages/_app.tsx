@@ -12,6 +12,11 @@ const GlobalStyle = createGlobalStyle`
     src: url(./static/fonts/Inter-Bold.ttf);
   }
 
+  @font-face {
+    font-family: Inter-ExtraBold;
+    src: url(./static/fonts/Inter-ExtraBold.ttf);
+  }
+
   html, body{
     margin:0;
     min-width:300px;
